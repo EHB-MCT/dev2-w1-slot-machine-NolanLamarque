@@ -16,17 +16,18 @@ function pullLever() {
     // TODO: show slots and win status
     console.log('PullLever');
     slotMachine.spin();
-
+    showSlots();
+    showGameResult();
 }
 
 function showSlots() {
     // TODO: show the slot symbols in HTML
-    let htmlString = " ";
+    let result = "";
     for (let i = 0; i < slotMachine.slots.length; i++) {
         console.log(slotMachine.slots[i]);
-        htmlString += '<span class="♥">♥</span>';
-        console.log(htmlString);
-        document.querySelector("result").innerHTML = htmlString;
+        result += '<span class="♥">♥</span>' ;
+        console.log(result);
+        document.querySelector("#result").innerHTML = result;
 
     }
 

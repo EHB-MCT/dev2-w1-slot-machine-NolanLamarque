@@ -10,6 +10,7 @@ export const slotMachine = {
     reset: function () {
         // TODO: Empty out the slots and reset 'win'-boolean
         
+        
     },
     symbols: ["♠", "♥", "♣", "♦"],
     slots: [],
