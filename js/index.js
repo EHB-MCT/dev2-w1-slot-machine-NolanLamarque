@@ -4,20 +4,32 @@ import {
 
 function init() {
     console.log("Init");
-    // TODO: log the document using console.log to test if you can get access to it
-    // TODO: log the submit button. If that works, store that button in a variable
-    // TODO: attach an event listener to that button and show a log "button clicked"
-    // TODO: if the submit button is clicked, the lever is pulled (= call that function)
+    document.querySelector("#button").addEventListener("click", function() {
+    console.log("click OK");
+    pullLever();
+
+    });
 }
 
 function pullLever() {
     // TODO: reset the machine (you may skip this step for now, and focus on getting the machine to work first)
-    // TODO: spin the slot machine
     // TODO: show slots and win status
+    console.log('PullLever');
+    slotMachine.spin();
+
 }
 
 function showSlots() {
     // TODO: show the slot symbols in HTML
+    let htmlString = " ";
+    for (let i = 0; i < slotMachine.slots.length; i++) {
+        console.log(slotMachine.slots[i]);
+        htmlString += '<span class="♥">♥</span>';
+        console.log(htmlString);
+        document.querySelector("result").innerHTML = htmlString;
+
+    }
+
 }
 
 function showGameResult() {
